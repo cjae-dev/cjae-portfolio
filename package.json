@@ -1,4 +1,5 @@
 {
+  "homepage": "https://cjae-dev.github.io/cjae-porfolio/",
   "name": "cjae-react-portfolio",
   "version": "1.0.0",
   "private": true,
@@ -6,14 +7,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "^5.4.11",
+    "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "lucide-react": "^0.468.0"
+    "vite": "^5.4.11"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4"
+  }
 }
