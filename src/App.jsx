@@ -8,9 +8,12 @@ import About from './components/About';
 import PortfolioShowcase from './components/PortfolioShowcase';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import ProjectDetailPage from './components/ProjectDetailPage';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
+  const [isRouteLeaving, setIsRouteLeaving] = useState(false);
 
   const handleNavigate = (href) => {
     const target = document.querySelector(href);
@@ -52,9 +55,44 @@ export default function App() {
     requestAnimationFrame(animateScroll);
   };
 
+
+  const goToProject = (slug) => {
+    setIsRouteLeaving(true);
+
+    window.setTimeout(() => {
+      window.location.hash = `/project/${slug}`;
+      window.scrollTo(0, 0);
+      setIsRouteLeaving(false);
+    }, 240);
+  };
+
+  const goBackToPortfolio = (event) => {
+    if (event) {
+      event.preventDefault();
+    }
+
+    setIsRouteLeaving(true);
+
+    window.setTimeout(() => {
+      window.location.hash = 'portfolio';
+      setIsRouteLeaving(false);
+
+      window.setTimeout(() => {
+        handleNavigate('#portfolio');
+      }, 80);
+    }, 240);
+  };
+
   useEffect(() => {
     const loader = setTimeout(() => setIsLoading(false), 5000);
     return () => clearTimeout(loader);
+  }, []);
+
+  useEffect(() => {
+    const handleHashChange = () => setCurrentHash(window.location.hash);
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   useEffect(() => {
@@ -70,20 +108,48 @@ export default function App() {
     items.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
-  }, [isLoading]);
+  }, [isLoading, currentHash]);
+
+  useEffect(() => {
+    if (isLoading || currentHash.startsWith('#/project/')) {
+      return;
+    }
+
+    if (currentHash === '#portfolio' || currentHash === '#about' || currentHash === '#skills' || currentHash === '#contact') {
+      window.setTimeout(() => {
+        handleNavigate(currentHash);
+      }, 120);
+    }
+  }, [currentHash, isLoading]);
 
   if (isLoading) {
     return <Welcome isLoadingScreen />;
   }
 
+  const projectSlug = currentHash.replace('#/project/', '');
+  const selectedProject = currentHash.startsWith('#/project/')
+    ? projects.find((project) => project.slug === projectSlug)
+    : null;
+
+  if (selectedProject) {
+    return (
+      <>
+        <Navbar onNavigate={handleNavigate} />
+        <div className={`route-shell ${isRouteLeaving ? 'route-leaving' : ''}`}>
+          <ProjectDetailPage project={selectedProject} onBack={goBackToPortfolio} />
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar onNavigate={handleNavigate} />
-      <main>
+      <main className={`route-shell ${isRouteLeaving ? 'route-leaving' : ''}`}>
         <Hero />
         <About />
-        <PortfolioShowcase projects={projects} certificates={certificates} skills={skills} />
-        <Skills skills={skills} />
+        <PortfolioShowcase projects={projects} certificates={certificates} skills={skills} onProjectNavigate={goToProject} />
+        {/* <Skills skills={skills} /> */}
         <Contact />
       </main>
     </>

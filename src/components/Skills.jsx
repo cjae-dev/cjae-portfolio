@@ -8,19 +8,29 @@ export default function Skills({ skills }) {
           <h2>Tools I use to build frontend, backend, plugins, and dashboards.</h2>
         </div>
 
-        <div className="marquee" data-reveal>
-          <div className="marquee-track">
-            {[...skills, ...skills].map((skill, index) => (
-              <span key={`${skill}-${index}`}>{skill}</span>
-            ))}
-          </div>
+        <div className="marquee-track">
+          {[...skills, ...skills].map((skill, index) => (
+            <span key={`${skill.name}-${index}`}>
+              {skill.name}
+            </span>
+          ))}
         </div>
 
         <div className="skill-grid">
           {skills.map((skill, index) => (
-            <div className="skill-card" key={skill} data-reveal style={{ transitionDelay: `${index * 35}ms` }}>
-              <span>{skill.charAt(0)}</span>
-              <b>{skill}</b>
+            <div
+              className="skill-card"
+              key={skill.name}
+              data-reveal
+              style={{ transitionDelay: `${index * 35}ms` }}
+            >
+              <img
+                src={skill.image}
+                alt={skill.name}
+                className="skill-icon"
+              />
+
+              <b>{skill.name}</b>
             </div>
           ))}
         </div>

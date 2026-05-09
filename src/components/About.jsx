@@ -20,7 +20,7 @@ export default function About() {
 
         <div className="about-image" data-reveal="right">
           <div className="profile-orb">
-            <img src="/images/cjae-pic-edited.png" alt="Cjae profile" />
+            <img src={`${import.meta.env.BASE_URL}images/cjae-pic-edited.png`} alt="Cjae profile" />
           </div>
         </div>
 

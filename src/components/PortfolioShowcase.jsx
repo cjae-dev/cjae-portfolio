@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { Award, Code2, Layers3, Github, ExternalLink, ArrowLeft, ChevronDown, ChevronUp, X } from 'lucide-react';
+import { Award, Code2, Layers3, Github, ChevronDown, ChevronUp } from 'lucide-react';
 
-const tabs = ['Project', 'Design', 'Editing'];
+const tabs = ['Project', 'Landing Page', 'Editing'];
 
 const fallbackCertificates = [
   {
@@ -22,15 +22,60 @@ const fallbackCertificates = [
 ];
 
 const fallbackSkills = [
-  'React', 'JavaScript', 'PHP', 'Laravel', 'MySQL', 'WordPress',
-  'jQuery', 'Bootstrap', 'HTML', 'CSS', 'FastAPI', 'Next.js'
+  {
+    name: 'React',
+    image: '/images/skills/react.png'
+  },
+  {
+    name: 'Next.js',
+    image: '/images/skills/nextjs.png'
+  },
+  {
+    name: 'JavaScript',
+    image: '/images/skills/javascript.png'
+  },
+  {
+    name: 'TypeScript',
+    image: '/images/skills/typescript.png'
+  },
+  {
+    name: 'PHP',
+    image: '/images/skills/php.png'
+  },
+  {
+    name: 'Laravel',
+    image: '/images/skills/laravel.png'
+  },
+  {
+    name: 'FastAPI',
+    image: '/images/skills/fastapi.png'
+  },
+  {
+    name: 'MySQL',
+    image: '/images/skills/mysql.png'
+  },
+  {
+    name: 'WordPress',
+    image: '/images/skills/wordpress.png'
+  },
+  {
+    name: 'jQuery',
+    image: '/images/skills/jquery.png'
+  },
+  {
+    name: 'Bootstrap',
+    image: '/images/skills/bootstrap.png'
+  },
+  {
+    name: 'Docker',
+    image: '/images/skills/docker.png'
+  }
 ];
 
-export default function PortfolioShowcase({ projects = [], certificates = [], skills = [] }) {
+export default function PortfolioShowcase({ projects = [], certificates = [], skills = [], onProjectNavigate }) {
   const [activeMain, setActiveMain] = useState('Projects');
   const [activeTab, setActiveTab] = useState('Project');
   const [showAll, setShowAll] = useState(false);
-  const [selected, setSelected] = useState(null);
   const [animationKey, setAnimationKey] = useState(0);
 
   const certificateItems = certificates.length ? certificates : fallbackCertificates;
@@ -46,7 +91,6 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
   const handleMainTab = (tab) => {
     setActiveMain(tab);
     setShowAll(false);
-    setSelected(null);
     setAnimationKey((prev) => prev + 1);
   };
 
@@ -89,18 +133,34 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
                 {visibleProjects.map((project, index) => {
                   const direction = index % 3 === 0 ? 'left' : index % 3 === 1 ? 'up' : 'right';
                   return (
-                  <article className="portfolio-card cinematic-card fixed-project-card" data-reveal={direction} style={{ '--reveal-delay': `${index * 120}ms` }} key={`${animationKey}-${activeTab}-${project.title}`}>
-                    <div className="portfolio-img">
+                  <article className="portfolio-card cinematic-card fixed-project-card" data-reveal={direction} style={{ '--reveal-delay': `${index * 120}ms` }} key={`${animationKey}-${activeTab}-${project.title}-${index}`}>
+                    <div className={project.group === 'Landing Page' ? 'portfolio-img landing-preview' : 'portfolio-img'} >
                       <img src={project.image} alt={project.title} />
                       <div className="portfolio-overlay">
                         <span>{project.category}</span>
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
                         <div className="overlay-actions">
-                          <a href={project.github || 'https://github.com/cjae-dev'} target="_blank" rel="noreferrer">
-                            <Github size={16} /> GitHub
-                          </a>
-                          <button type="button" onClick={() => setSelected(project)}>Details →</button>
+                          {project.github && (
+                            <a href={project.github} target="_blank" rel="noreferrer">
+                              <Github size={16} /> GitHub
+                            </a>
+                          )}
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="project-link-btn"
+                            >
+                              Visit →
+                            </a>
+                          )}
+                          {project.slug && (
+                            <a href={`#/project/${project.slug}`} className="project-btn">
+                              Details →
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -144,61 +204,27 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
         {activeMain === 'Tech Stack' && (
           <div className="showcase-content-panel">
             <div className="showcase-tech-grid visible-grid" key={`skills-${animationKey}`}>
-              {skillItems.map((item, index) => <span data-reveal="up" style={{ '--reveal-delay': `${index * 45}ms` }} key={`${animationKey}-${item}`}>{item}</span>)}
+              {skillItems.map((item, index) => (
+                <div
+                  className="skill-card"
+                  data-reveal="up"
+                  style={{ '--reveal-delay': `${index * 45}ms` }}
+                  key={`${animationKey}-${item.name}`}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="skill-icon"
+                  />
+
+                  <span>{item.name}</span>
+                </div>
+              ))}
             </div>
           </div>
         )}
       </div>
 
-      {selected && (
-        <div className="project-detail-overlay" role="dialog" aria-modal="true">
-          <button className="detail-close" type="button" onClick={() => setSelected(null)} aria-label="Close project detail">
-            <X size={22} />
-          </button>
-
-          <div className="detail-page-card">
-            <div className="detail-toolbar">
-              <button className="detail-back" type="button" onClick={() => setSelected(null)}>
-                <ArrowLeft size={18} /> Back
-              </button>
-
-              <div className="detail-breadcrumb">
-                <span>Projects</span><b>›</b><strong>{selected.title}</strong>
-              </div>
-            </div>
-
-            <div className="detail-layout modal-detail-layout">
-              <div className="detail-copy">
-                <span>{selected.category}</span>
-                <h2>{selected.title}</h2>
-                <i></i>
-                <p>{selected.longDescription || selected.description}</p>
-
-                <div className="detail-stack">
-                  {(selected.stack || []).map((item) => <em key={item}>{item}</em>)}
-                </div>
-
-                <ul className="detail-list">
-                  {(selected.metrics || []).map((item) => <li key={item}>{item}</li>)}
-                </ul>
-
-                <div className="detail-actions">
-                  <a href={selected.github || 'https://github.com/cjae-dev'} target="_blank" rel="noreferrer" className="btn btn-dark">
-                    <Github size={16} /> GitHub
-                  </a>
-                  <a href={selected.live || '#portfolio'} className="btn btn-primary">
-                    <ExternalLink size={16} /> View App
-                  </a>
-                </div>
-              </div>
-
-              <div className="detail-preview modal-detail-preview">
-                <img src={selected.image} alt={selected.title} />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

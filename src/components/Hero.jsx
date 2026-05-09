@@ -75,7 +75,7 @@ export default function Hero() {
 
           <div className="hero-actions reveal-child">
             <a className="btn btn-primary" href="#portfolio">Projects <ExternalLink size={16} /></a>
-            <a className="btn btn-dark" href="#contact">Contact <Mail size={16} /></a>
+            <a className="btn btn-dark" href="#contact"><span className="mg-r-10 mg-b-3">Contact</span> <Mail size={16} /></a>
           </div>
 
           <div className="social-row reveal-child">
@@ -85,16 +85,38 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-device" data-reveal="right">
+        <div className="hero-device animated-portfolio-device" data-reveal="right">
           <div className="device-head"><span><i></i> System Online</span><span>Portfolio UI</span></div>
-          <div className="device-screen">
-            <div className="screen-code">&gt; npm run dev</div>
-            <div className="screen-card">
-              <span>Creative UI</span>
-              <strong>Modern Portfolio</strong>
-              <small>React powered showcase</small>
+          <div className="device-screen animated-dashboard-screen">
+            <div className="floating-code-window">
+              <div className="code-window-head"><span></span><span></span><span></span></div>
+              <div className="moving-code-lines">
+                <p><b>const</b> portfolio = buildUI();</p>
+                <p><b>await</b> deployProject(slug);</p>
+                <p>render(&lt;Dashboard /&gt;);</p>
+                <p>route.push('/project/crm-lite');</p>
+                <p><b>return</b> cleanExperience;</p>
+              </div>
             </div>
-            <div className="screen-bars"><i></i><i></i><i></i></div>
+
+            <div className="dashboard-widget widget-main">
+              <span>Active Projects</span>
+              <strong>08</strong>
+              <small>React • PHP • WordPress</small>
+            </div>
+
+            <div className="dashboard-widget widget-chart">
+              <span>UI Progress</span>
+              <div className="chart-bars"><i></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div className="dashboard-widget widget-status">
+              <span>Build Status</span>
+              <strong>Live</strong>
+              <small>GitHub Pages ready</small>
+            </div>
+
+            <div className="tech-orbit"><span>React</span><span>Laravel</span><span>WP</span></div>
           </div>
         </div>
       </div>

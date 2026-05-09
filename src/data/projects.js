@@ -1,9 +1,10 @@
 export const projects = [
   {
     title: 'CRM Lite',
+    slug: 'crm-lite',
     category: 'Full Stack System',
     group: 'Project',
-    image: '/images/crm-lite.png',
+    image: `${import.meta.env.BASE_URL}images/crm-lite.png`,
     description: 'A CRM dashboard with leads, opportunities, user roles, status tracking, and analytics.',
     longDescription: 'A full-stack CRM case study built to showcase real business workflows. It includes lead management, opportunity conversion, user role handling, dashboard widgets, and structured CRUD screens that make the project feel like a real internal business application.',
     stack: ['Laravel', 'MySQL', 'Bootstrap'],
@@ -12,9 +13,10 @@ export const projects = [
   },
   {
     title: 'Smart CTA Banner',
+    slug: 'smart-cta-banner',
     category: 'WordPress Plugin',
     group: 'Project',
-    image: '/images/smart-cta-banner.png',
+    image: `${import.meta.env.BASE_URL}images/smart-cta-banner.png`,
     description: 'A marketing banner plugin with sticky CTA placement, scroll triggers, and timing controls.',
     longDescription: 'A WordPress plugin created for landing pages and marketing websites. It lets admins configure sticky banners, CTA labels, links, timing rules, and scroll-based display behavior without editing theme files.',
     stack: ['PHP', 'WordPress', 'JavaScript'],
@@ -23,9 +25,10 @@ export const projects = [
   },
   {
     title: 'Smart Popup Builder',
+    slug: 'smart-popup-builder',
     category: 'WordPress Plugin',
     group: 'Project',
-    image: '/images/smart-popup-builder.png',
+    image: `${import.meta.env.BASE_URL}images/smart-popup-builder.png`,
     description: 'A popup management plugin for campaigns, offers, announcements, and lead capture sections.',
     longDescription: 'A lightweight campaign popup plugin for WordPress. It focuses on reusable popup content, frontend display logic, delay triggers, admin form settings, and clean visitor-facing UI.',
     stack: ['PHP', 'WordPress', 'jQuery'],
@@ -34,58 +37,105 @@ export const projects = [
   },
   {
     title: 'Smart Testimonial Slider',
+    slug: 'smart-testimonial-slider',
     category: 'WordPress Plugin',
     group: 'Project',
-    image: '/images/smart-testimonial-slider.png',
+    image: `${import.meta.env.BASE_URL}images/smart-testimonial-slider.png`,
     description: 'A testimonial slider plugin with admin-controlled entries, ratings, avatars, and frontend display.',
     longDescription: 'A testimonial slider plugin designed for business websites. It includes admin-controlled testimonial entries, rating display, frontend slider layout, and shortcode-style usage for easy placement.',
     stack: ['PHP', 'WordPress', 'CSS'],
     metrics: ['Slider UI', 'Admin Form', 'Shortcode', 'Ratings'],
     github: 'https://github.com/cjae-dev'
   },
+  // {
+  //   title: 'OOm Institute Workflows',
+  //   slug: 'oom-institute-workflows',
+  //   category: 'Business Systems',
+  //   group: 'Project',
+  //   image: `${import.meta.env.BASE_URL}images/oom.png`,
+  //   description: 'Workflow-focused interfaces for operational systems, reports, registrations, and tracking.',
+  //   longDescription: 'A business workflow showcase based on CRM-style modules such as registrations, attendance, reports, course schedules, and automation. The focus is on complex data handling and practical operational use cases.',
+  //   stack: ['PHP', 'MySQL', 'AJAX'],
+  //   metrics: ['Reports', 'Automation', 'Dashboards', 'Workflow Tracking'],
+  //   github: 'https://github.com/cjae-dev'
+  // },
   {
-    title: 'OOm Institute Workflows',
-    category: 'Business Systems',
-    group: 'Project',
-    image: '/images/oom.png',
-    description: 'Workflow-focused interfaces for operational systems, reports, registrations, and tracking.',
-    longDescription: 'A business workflow showcase based on CRM-style modules such as registrations, attendance, reports, course schedules, and automation. The focus is on complex data handling and practical operational use cases.',
-    stack: ['PHP', 'MySQL', 'AJAX'],
-    metrics: ['Reports', 'Automation', 'Dashboards', 'Workflow Tracking'],
-    github: 'https://github.com/cjae-dev'
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/adcos.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
   },
   {
-    title: 'Landing Page Gallery',
-    category: 'Frontend Showcase',
-    group: 'Design',
-    image: '/images/website.png',
-    description: 'A gallery of responsive landing page layouts built for clean visual hierarchy and CTA focus.',
-    longDescription: 'A frontend design showcase with full-page landing page previews. It focuses on responsive sections, spacing, CTA placement, visual hierarchy, and smooth hover interactions.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout'],
-    github: 'https://github.com/cjae-dev'
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/curtains.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
   },
   {
-    title: 'Website Mockup Design',
-    category: 'UI Design',
-    group: 'Design',
-    image: '/images/adcos.png',
-    description: 'A clean website mockup focused on section layout, spacing, and brand presentation.',
-    longDescription: 'A website design case study focused on presenting brand value through clean sections, readable typography, modern card layouts, and clear visual hierarchy.',
-    stack: ['Figma Style', 'HTML', 'CSS'],
-    metrics: ['Hero Layout', 'CTA Sections', 'Responsive Design'],
-    github: 'https://github.com/cjae-dev'
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/fionboon.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
   },
   {
-    title: 'Creative Editing Showcase',
-    category: 'Editing',
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/hertz.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
+  },
+  {
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/inplex.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
+  },
+  {
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/little-seeds.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
+  },
+  {
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/renosdoor.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
+  },
+  {
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/ridpest.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
+  },
+  {
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/rs108.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
+  },
+  {
+    group: 'Landing Page',
+    image: `${import.meta.env.BASE_URL}images/youle.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout']
+  },
+  {
+    title: 'Cozy Corner',
     group: 'Editing',
-    image: '/images/fionboon.png',
-    description: 'A visual showcase card prepared for photo, video, and creative editing portfolio content.',
-    longDescription: 'A creative editing portfolio entry prepared for visual work such as photo edits, video concepts, thumbnails, and layout presentation. It is included to show design versatility beyond code.',
-    stack: ['Design', 'Editing', 'Creative'],
-    metrics: ['Visual Direction', 'Composition', 'Portfolio Ready'],
-    github: 'https://github.com/cjae-dev'
+    image: `${import.meta.env.BASE_URL}images/edit-cozy-corner.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout'],
+    link: "https://www.behance.net/gallery/193798805/Cozy-Corner-Furniture-Landing-Page"
+  },
+  {
+    title: 'Power Peak',
+    group: 'Editing',
+    image: `${import.meta.env.BASE_URL}images/edit-power-peak.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout'],
+    link: "https://www.behance.net/gallery/194178985/Power-Peak-Fitness"
+  },
+  {
+    title: 'Coastal Haven',
+    group: 'Editing',
+    image: `${import.meta.env.BASE_URL}images/edit-coastal-haven.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout'],
+    link: "https://www.behance.net/gallery/193798481/Coastal-Haven-Landing-Page"
+  },
+  {
+    title: 'Savory Bites',
+    group: 'Editing',
+    image: `${import.meta.env.BASE_URL}images/edit-savory-bites.png`,
+    metrics: ['Responsive UI', 'Hover Preview', 'Modern Layout'],
+    link: "https://www.behance.net/gallery/193798309/Savory-Bites-Landing-Page"
   }
 ];
 
@@ -108,6 +158,52 @@ export const certificates = [
 ];
 
 export const skills = [
-  'React', 'Next.js', 'JavaScript', 'TypeScript', 'PHP', 'Laravel',
-  'FastAPI', 'MySQL', 'WordPress', 'jQuery', 'Bootstrap', 'Docker'
+  {
+    name: 'React',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+  },
+  {
+    name: 'Next.js',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
+  },
+  {
+    name: 'JavaScript',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+  },
+  {
+    name: 'TypeScript',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+  },
+  {
+    name: 'PHP',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'
+  },
+  {
+    name: 'Laravel',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg'
+  },
+  {
+    name: 'FastAPI',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg'
+  },
+  {
+    name: 'MySQL',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+  },
+  {
+    name: 'WordPress',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg'
+  },
+  {
+    name: 'jQuery',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg'
+  },
+  {
+    name: 'Bootstrap',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'
+  },
+  {
+    name: 'Docker',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg'
+  }
 ];
