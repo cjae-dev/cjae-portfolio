@@ -141,20 +141,11 @@ export const projects = [
 
 export const certificates = [
   {
-    title: 'Frontend Development',
-    issuer: 'Portfolio Certificate',
-    description: 'Validated skills in responsive UI, reusable components, and modern JavaScript development.'
+    title: 'Next.js & React - The Complete Guide',
+    issuer: 'Udemy - Maximilian Schwarzmüller',
+    description: 'Teaches you the latest version of Next.js and covers both the "App Router" and "Pages Router" '
   },
-  {
-    title: 'WordPress Plugin Development',
-    issuer: 'Project Based',
-    description: 'Created custom plugins using PHP, WordPress hooks, admin settings, and frontend scripts.'
-  },
-  {
-    title: 'Full Stack Web Systems',
-    issuer: 'Case Study',
-    description: 'Built CRM-style workflows with database-driven modules, dashboard logic, and CRUD features.'
-  }
+  
 ];
 
 export const skills = [

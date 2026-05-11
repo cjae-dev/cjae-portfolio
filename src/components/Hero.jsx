@@ -58,12 +58,12 @@ export default function Hero() {
 
       <div className="container hero-grid">
         <div className="hero-copy" data-reveal="left">
-          <span className="owner-name reveal-child">Cjae Limos</span>
+          <span className="owner-name reveal-child">C jae Malabanan Limos</span>
           <h2 className="reveal-child">Full Stack<br /><span>Developer</span></h2>
           <div className="type-line reveal-child"><span>{text}</span><i></i></div>
 
           <p className="hero-description reveal-child">
-            A creative and multidisciplinary digital professional with a passion for transforming ideas into exceptional visual and functional experiences. I specialize in designing, building, and deploying intuitive, fast, and future-ready web applications.
+            Full-stack developer focused on building fast, scalable, and user-friendly web applications with modern UI and clean architecture.
           </p>
 
           <div className="hero-tags reveal-child">

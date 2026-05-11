@@ -9,6 +9,7 @@ import PortfolioShowcase from './components/PortfolioShowcase';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import ProjectDetailPage from './components/ProjectDetailPage';
+import ThankYou from './components/ThankYou';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -140,6 +141,10 @@ export default function App() {
         </div>
       </>
     );
+  }
+
+  if (currentHash === '#thank-you') {
+    return <ThankYou />;
   }
 
   return (

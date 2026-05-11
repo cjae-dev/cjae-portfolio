@@ -4044,3 +4044,59 @@ body.is-navigating [data-reveal].is-visible{
 .showcase-tech-grid .skill-card:hover .skill-icon {
   transform: scale(1.12) rotate(-3deg);
 }
+
+.thank-you-section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+.thank-you-card{
+  width:min(620px,100%);
+  padding:70px 50px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:32px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,52,84,.12),
+      rgba(109,92,255,.08)
+    ),
+    rgba(15,17,26,.92);
+  backdrop-filter:blur(12px);
+  text-align:center;
+  box-shadow:0 25px 80px rgba(0,0,0,.45);
+}
+
+.thank-you-icon{
+  width:110px;
+  height:110px;
+  margin:0 auto 24px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(50,230,146,.12);
+  color:#32e692;
+}
+
+.thank-you-card h1{
+  font-size:58px;
+  margin-top:16px;
+  margin-bottom:18px;
+}
+
+.thank-you-card p{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:34px;
+}
+
+.thank-you-card .btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
