@@ -18,7 +18,7 @@ export default function ThankYou() {
           I’ll get back to you as soon as possible.
         </p>
 
-        <a href="/cjae-porfolio/" className="btn btn-primary">
+        <a href="/cjae-portfolio/" className="btn btn-primary">
           <ArrowLeft size={18} />
           Back to Portfolio
         </a>
