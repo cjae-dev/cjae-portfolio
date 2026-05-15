@@ -149,13 +149,14 @@ export const certificates = [
 ];
 
 export const skills = [
+  // Frontend
   {
-    name: 'React',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+    name: 'HTML',
+    image: 'https://cdn.simpleicons.org/html5'
   },
   {
-    name: 'Next.js',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
+    name: 'CSS',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
   },
   {
     name: 'JavaScript',
@@ -165,6 +166,24 @@ export const skills = [
     name: 'TypeScript',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
   },
+  {
+    name: 'React',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+  },
+  {
+    name: 'Next.js',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
+  },
+  {
+    name: 'jQuery',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg'
+  },
+  {
+    name: 'Bootstrap',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'
+  },
+
+  // Backend
   {
     name: 'PHP',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'
@@ -182,19 +201,61 @@ export const skills = [
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
   },
   {
+    name: 'REST API',
+    image: 'https://cdn-icons-png.flaticon.com/512/2165/2165004.png'
+  },
+  {
+    name: 'AJAX',
+    image: 'https://cdn-icons-png.flaticon.com/512/1006/1006363.png'
+  },
+
+  // CMS & Website Builders
+  {
     name: 'WordPress',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg'
   },
   {
-    name: 'jQuery',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg'
+    name: 'WooCommerce',
+    image: 'https://cdn.simpleicons.org/woocommerce'
   },
   {
-    name: 'Bootstrap',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'
+    name: 'Elementor',
+    image: 'https://cdn.simpleicons.org/elementor'
   },
+  {
+    name: 'Shopify',
+    image: 'https://cdn.simpleicons.org/shopify'
+  },
+  {
+    name: 'Wix',
+    image: 'https://cdn.simpleicons.org/wix'
+  },
+
+  // Tools & DevOps
   {
     name: 'Docker',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg'
+  },
+  {
+    name: 'Git',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'
+  },
+  {
+    name: 'Supabase',
+    image: 'https://cdn.simpleicons.org/supabase'
+  },
+  {
+    name: 'cPanel',
+    image: 'https://cdn.simpleicons.org/cpanel'
+  },
+
+  // Design & Analytics
+  {
+    name: 'Figma',
+    image: 'https://cdn.simpleicons.org/figma'
+  },
+  {
+    name: 'Google Analytics',
+    image: 'https://cdn.simpleicons.org/googleanalytics'
   }
 ];

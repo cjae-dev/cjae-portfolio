@@ -2097,10 +2097,11 @@ body:after{
   line-height:1.7;
 }
 
-.showcase-tech-grid{
-  grid-template-columns:repeat(4,1fr);
-}
-
+/* .showcase-tech-grid{
+  grid-template-columns:repeat(5,1fr);
+  max-width:1400px;
+  width:100%;
+} */
 .showcase-tech-grid span{
   min-height:50px;
   display:grid;
@@ -2389,8 +2390,7 @@ body:after{
   object-position:top center;
 }
 
-.certificate-grid.visible-grid,
-.showcase-tech-grid.visible-grid{
+.certificate-grid.visible-grid{
   max-width:1180px;
   margin-left:auto;
   margin-right:auto;
@@ -4099,4 +4099,60 @@ body.is-navigating [data-reveal].is-visible{
   display:inline-flex;
   align-items:center;
   gap:10px;
+}
+
+
+.showcase-tech-wrapper{
+  width:min(1600px,95%);
+  margin:34px auto 0;
+}
+
+.showcase-tech-grid.visible-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:22px;
+  width:100%;
+  max-width:none;
+}
+
+.showcase-tech-grid .skill-card{
+  width:100%;
+}
+
+.showcase-tech-panel{
+  width:100%;
+  max-width:1500px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:24px !important;
+  padding-right:24px !important;
+}
+.tech-reveal-card{
+  opacity:0;
+  transform:translateY(28px) scale(.985);
+  animation:techRevealUp .75s cubic-bezier(.2,.75,.25,1) forwards;
+}
+
+@keyframes techRevealUp{
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+@media(max-width:1200px){
+  .showcase-tech-grid.visible-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+
+@media(max-width:900px){
+  .showcase-tech-grid.visible-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:560px){
+  .showcase-tech-grid.visible-grid{
+    grid-template-columns:1fr;
+  }
 }

@@ -201,30 +201,25 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
           </div>
         )}
 
-        {activeMain === 'Tech Stack' && (
-          <div className="showcase-content-panel">
-            <div className="showcase-tech-grid visible-grid" key={`skills-${animationKey}`}>
-              {skillItems.map((item, index) => (
-                <div
-                  className="skill-card"
-                  data-reveal="up"
-                  style={{ '--reveal-delay': `${index * 45}ms` }}
-                  key={`${animationKey}-${item.name}`}
-                >
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="skill-icon"
-                  />
-
-                  <span>{item.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        
       </div>
 
+      {activeMain === 'Tech Stack' && (
+        <div className="showcase-tech-wrapper">
+          <div className="showcase-tech-grid visible-grid" key={`skills-${animationKey}`}>
+            {skillItems.map((item, index) => (
+             <div
+                className="skill-card tech-reveal-card"
+                style={{ animationDelay: `${index * 45}ms` }}
+                key={`${animationKey}-${item.name}`}
+              >
+                <img src={item.image} alt={item.name} className="skill-icon" />
+                <span>{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
