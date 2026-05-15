@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { Award, Code2, Layers3, Github, ChevronDown, ChevronUp } from 'lucide-react';
 
 const tabs = ['Project', 'Landing Page', 'Editing'];
@@ -77,9 +77,101 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
   const [activeTab, setActiveTab] = useState('Project');
   const [showAll, setShowAll] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
+  const techSliderRef = useRef(null);
+  const [activeTechSlide, setActiveTechSlide] = useState(0);
 
   const certificateItems = certificates.length ? certificates : fallbackCertificates;
   const skillItems = skills.length ? skills : fallbackSkills;
+
+  const skillsPerSlide = 2;
+
+  const techSlides = useMemo(() => {
+    const slides = [];
+
+    for (let i = 0; i < skillItems.length; i += skillsPerSlide) {
+      slides.push(skillItems.slice(i, i + skillsPerSlide));
+    }
+
+    return slides;
+  }, [skillItems]);
+
+  const goToTechSlide = (index) => {
+    const slider = techSliderRef.current;
+
+    if (!slider) {
+      return;
+    }
+
+    const nextIndex = (index + techSlides.length) % techSlides.length;
+    setActiveTechSlide(nextIndex);
+
+    slider.scrollTo({
+      left: (nextIndex + 1) * slider.offsetWidth,
+      behavior: 'smooth'
+    });
+  };
+
+  const loopTechSlides = useMemo(() => {
+    if (!techSlides.length) {
+      return [];
+    }
+
+    return [
+      techSlides[techSlides.length - 1],
+      ...techSlides,
+      techSlides[0]
+    ];
+  }, [techSlides]);
+
+  useEffect(() => {
+    const slider = techSliderRef.current;
+
+    if (!slider || activeMain !== 'Tech Stack') {
+      return;
+    }
+
+    slider.scrollLeft = slider.offsetWidth;
+  }, [activeMain]);
+
+
+  const handleTechScroll = () => {
+    const slider = techSliderRef.current;
+
+    if (!slider) {
+      return;
+    }
+
+    const slideWidth = slider.offsetWidth;
+    const index = Math.round(slider.scrollLeft / slideWidth);
+
+    if (index === 0) {
+      setTimeout(() => {
+        slider.scrollTo({
+          left: techSlides.length * slideWidth,
+          behavior: 'auto'
+        });
+      }, 80);
+
+      setActiveTechSlide(techSlides.length - 1);
+      return;
+    }
+
+    if (index === loopTechSlides.length - 1) {
+      setTimeout(() => {
+        slider.scrollTo({
+          left: slideWidth,
+          behavior: 'auto'
+        });
+      }, 80);
+
+      setActiveTechSlide(0);
+      return;
+    }
+
+    setActiveTechSlide(index - 1);
+  };
+
+  
 
   const filteredProjects = useMemo(() => {
     const items = projects.filter((project) => project.group === activeTab);
@@ -206,16 +298,47 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
 
       {activeMain === 'Tech Stack' && (
         <div className="showcase-tech-wrapper">
-          <div className="showcase-tech-grid visible-grid" key={`skills-${animationKey}`}>
+          <div className="showcase-tech-desktop-grid">
             {skillItems.map((item, index) => (
-             <div
+              <div
                 className="skill-card tech-reveal-card"
                 style={{ animationDelay: `${index * 45}ms` }}
-                key={`${animationKey}-${item.name}`}
+                key={item.name}
               >
                 <img src={item.image} alt={item.name} className="skill-icon" />
                 <span>{item.name}</span>
               </div>
+            ))}
+          </div>
+
+          <div
+            ref={techSliderRef}
+            onScroll={handleTechScroll}
+            className="showcase-tech-slider"
+          >
+            {loopTechSlides.map((slide, slideIndex) => (
+              <div className="tech-slide" key={`tech-slide-${slideIndex}`}>
+                {slide.map((item, index) => (
+                  <div
+                    className="skill-card tech-reveal-card"
+                    style={{ animationDelay: `${index * 45}ms` }}
+                    key={`${item.name}-${slideIndex}`}
+                  >
+                    <img src={item.image} alt={item.name} className="skill-icon" />
+                    <span>{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          <div className="tech-slider-dots">
+            {techSlides.map((_, index) => (
+              <span
+                key={index}
+                className={activeTechSlide === index ? 'active' : ''}
+                onClick={() => goToTechSlide(index)}
+              ></span>
             ))}
           </div>
         </div>
