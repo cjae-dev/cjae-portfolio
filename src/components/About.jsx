@@ -37,7 +37,7 @@ export default function About() {
             <span>Certificates</span>
             <p>Professional skills validated</p>
             <strong>1</strong>
-            <small>• On Going</small>
+            <small>• Live</small>
           </div>
           <div className="stat-box" data-reveal="right">
             <Globe2 size={26} />
