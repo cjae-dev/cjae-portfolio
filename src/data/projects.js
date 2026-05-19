@@ -139,14 +139,6 @@ export const projects = [
   }
 ];
 
-export const certificates = [
-  {
-    title: 'Next.js & React - The Complete Guide',
-    issuer: 'Udemy - Maximilian Schwarzmüller',
-    description: 'Teaches you the latest version of Next.js and covers both the "App Router" and "Pages Router" '
-  },
-  
-];
 
 export const skills = [
   // Frontend

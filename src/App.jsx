@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { projects, skills, certificates } from './data/projects';
+import { projects, skills } from './data/projects';
+import { certificates } from './data/certificates';
 import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Hero from './components/Hero';

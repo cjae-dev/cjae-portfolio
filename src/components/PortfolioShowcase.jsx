@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Award, Code2, Layers3, Github, ChevronDown, ChevronUp } from 'lucide-react';
 
 const tabs = ['Project', 'Landing Page', 'Editing'];
@@ -79,7 +80,8 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
   const [animationKey, setAnimationKey] = useState(0);
   const techSliderRef = useRef(null);
   const [activeTechSlide, setActiveTechSlide] = useState(0);
-
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+  
   const certificateItems = certificates.length ? certificates : fallbackCertificates;
   const skillItems = skills.length ? skills : fallbackSkills;
 
@@ -282,7 +284,7 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
           <div className="showcase-content-panel">
             <div className="certificate-grid visible-grid" key={`certificates-${animationKey}`}>
               {certificateItems.map((item, index) => (
-                <article className="certificate-card" data-reveal={index === 0 ? 'left' : index === 1 ? 'up' : 'right'} style={{ '--reveal-delay': `${index * 120}ms` }} key={`${animationKey}-${item.title}`}>
+                <article className="certificate-card" onClick={() => setSelectedCertificate(item)} data-reveal={index === 0 ? 'left' : index === 1 ? 'up' : 'right'} style={{ '--reveal-delay': `${index * 120}ms` }} key={`${animationKey}-${item.title}`}>
                   <Award size={24} />
                   <span>{item.issuer}</span>
                   <h3>{item.title}</h3>
@@ -343,6 +345,30 @@ export default function PortfolioShowcase({ projects = [], certificates = [], sk
           </div>
         </div>
       )}
+      {selectedCertificate && createPortal(
+          <div
+            className="certificate-modal"
+            onClick={() => setSelectedCertificate(null)}
+          >
+            <button
+              className="certificate-close"
+              onClick={() => setSelectedCertificate(null)}
+            >
+              &times;
+            </button>
+
+            <img
+              className="certificate-modal-image"
+              src={selectedCertificate.image}
+              alt={selectedCertificate.title}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>,
+          document.body
+      )}
     </section>
+
+    
   );
+  
 }

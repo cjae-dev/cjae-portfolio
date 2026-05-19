@@ -1948,6 +1948,10 @@ body:after{
   margin-top:34px;
 }
 
+.certificate-card *{
+  pointer-events:none;
+}
+
 .certificate-card{
   min-height:230px;
   padding:28px;
@@ -1955,6 +1959,10 @@ body:after{
   border:1px solid rgba(255,255,255,.1);
   background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,52,84,.08));
   box-shadow:0 20px 70px rgba(255,52,84,.12);
+  cursor:pointer;
+  pointer-events:auto;
+  position:relative;
+  z-index:2;
 }
 
 .certificate-card svg{
@@ -4004,6 +4012,69 @@ body.is-navigating [data-reveal].is-visible{
   transition:.28s ease;
 }
 
+.certificate-modal{
+  position:fixed;
+  inset:0;
+  z-index:999999;
+  background:rgba(0,0,0,.9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+
+.certificate-modal-image{
+  width:auto;
+  max-width:90vw;
+  max-height:85vh;
+  object-fit:contain;
+  border-radius:12px;
+}
+
+.certificate-close{
+  position:fixed;
+  top:24px;
+  right:36px;
+  color:#fff;
+  font-size:42px;
+  font-weight:bold;
+  background:transparent;
+  border:0;
+  cursor:pointer;
+  z-index:1000000;
+}
+
+.certificate-card{
+  cursor:pointer;
+}
+
+.certificate-card{
+  cursor:pointer;
+  transition:
+    transform .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease,
+    background .28s ease;
+}
+
+.certificate-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  border-color:rgba(255, 105, 135, .45);
+  box-shadow:0 24px 70px rgba(255, 70, 100, .18);
+  background:linear-gradient(145deg, rgba(255, 80, 110, .12), rgba(255, 255, 255, .03));
+}
+
+.certificate-card:hover svg{
+  transform:scale(1.15) rotate(-8deg);
+}
+
+.certificate-card svg{
+  transition:transform .28s ease;
+}
+
+.certificate-card:hover h3{
+  text-shadow:0 0 18px rgba(255, 120, 145, .22);
+}
 /* =========================================================
    Responsive Styles
    Consolidated media queries are placed at the bottom.
