@@ -9,7 +9,7 @@ export const projects = [
     longDescription: 'A full-stack CRM case study built to showcase real business workflows. It includes lead management, opportunity conversion, user role handling, dashboard widgets, and structured CRUD screens that make the project feel like a real internal business application.',
     stack: ['Laravel', 'MySQL', 'Bootstrap'],
     metrics: ['Lead Management', 'Opportunity Pipeline', 'Role Access', 'Dashboard Analytics'],
-    github: 'https://github.com/cjae-dev'
+    github: 'https://github.com/cjae-dev/crm-lite'
   },
   {
     title: 'Smart CTA Banner',
@@ -21,7 +21,7 @@ export const projects = [
     longDescription: 'A WordPress plugin created for landing pages and marketing websites. It lets admins configure sticky banners, CTA labels, links, timing rules, and scroll-based display behavior without editing theme files.',
     stack: ['PHP', 'WordPress', 'JavaScript'],
     metrics: ['Sticky Banner', 'CTA Button', 'Trigger Rules', 'Admin Settings'],
-    github: 'https://github.com/cjae-dev'
+    github: 'https://github.com/cjae-dev/smart-cta-banner'
   },
   {
     title: 'Smart Popup Builder',
@@ -33,7 +33,7 @@ export const projects = [
     longDescription: 'A lightweight campaign popup plugin for WordPress. It focuses on reusable popup content, frontend display logic, delay triggers, admin form settings, and clean visitor-facing UI.',
     stack: ['PHP', 'WordPress', 'jQuery'],
     metrics: ['Popup Editor', 'Delay Trigger', 'Campaign UI', 'Reusable Settings'],
-    github: 'https://github.com/cjae-dev'
+    github: 'https://github.com/cjae-dev/smart-popup-builder'
   },
   {
     title: 'Smart Testimonial Slider',
@@ -45,7 +45,7 @@ export const projects = [
     longDescription: 'A testimonial slider plugin designed for business websites. It includes admin-controlled testimonial entries, rating display, frontend slider layout, and shortcode-style usage for easy placement.',
     stack: ['PHP', 'WordPress', 'CSS'],
     metrics: ['Slider UI', 'Admin Form', 'Shortcode', 'Ratings'],
-    github: 'https://github.com/cjae-dev'
+    github: 'https://github.com/cjae-dev/smart-testimonial-slider'
   },
   // {
   //   title: 'OOm Institute Workflows',
