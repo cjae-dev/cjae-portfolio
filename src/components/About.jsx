@@ -36,7 +36,7 @@ export default function About() {
             <FileText size={26} />
             <span>Certificates</span>
             <p>Professional skills validated</p>
-            <strong>2</strong>
+            <strong>3</strong>
             <small>• Live</small>
           </div>
           <div className="stat-box" data-reveal="right">
