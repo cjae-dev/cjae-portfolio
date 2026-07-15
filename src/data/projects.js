@@ -249,5 +249,9 @@ export const skills = [
   {
     name: 'Google Analytics',
     image: 'https://cdn.simpleicons.org/googleanalytics'
+  },
+  {
+    name: 'Drupal',
+    image: 'https://cdn.simpleicons.org/drupal/0678BE'
   }
 ];
