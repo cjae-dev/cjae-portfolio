@@ -12,6 +12,12 @@ export const certificates = [
     image: `${import.meta.env.BASE_URL}images/certificates/cjae-wordpress-elementor.jpg`
   },
   {
+    title: 'Drupal 11 Basics for Developers and Sitebuilders - 2026',
+    issuer: 'Udemy - Peter Majmesku',
+    description: 'Your Guide to Implementing Ambitious Drupal Projects.',
+    image: `${import.meta.env.BASE_URL}images/certificates/cjae-drupal-11-certificate.jpg`
+  },
+  {
     title: 'Digital Marketing Expert Program',
     issuer: 'NeoDocto',
     description: 'Included on Internship program for Website Development with NeoDocto Inc.',
