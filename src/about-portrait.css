@@ -1,0 +1,30 @@
+.about-image {
+  position: relative;
+  align-self: center;
+  overflow: visible;
+}
+
+.composite-profile-orb {
+  width: min(420px, 90vw);
+  height: min(420px, 90vw);
+  margin-inline: auto;
+  overflow: visible;
+  background:
+    radial-gradient(circle, #fff 0 38%, rgba(255, 52, 84, .18) 39% 55%, transparent 56%);
+  filter: drop-shadow(0 30px 70px rgba(255, 52, 84, .24));
+}
+
+.composite-profile-orb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 560px) {
+  .composite-profile-orb {
+    width: min(360px, 90vw);
+    height: min(360px, 90vw);
+  }
+}
