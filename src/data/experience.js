@@ -19,12 +19,12 @@ export const featuredExperience = {
       label: 'Year 1',
       title: 'PHP CRM Development',
       description:
-        'Maintained and enhanced the company?s established PHP-based internal CRM and reporting tools.',
+        'Maintained and enhanced the companies established PHP-based internal CRM and reporting tools.',
       highlights: [
         'Developed business workflows and resolved production issues across frontend and backend systems.',
-        'Optimized complex MySQL queries, operational reports, and Excel exports.'
+        'Optimized complex MySQL queries, operational reports, and REST APIs.'
       ],
-      technologies: ['PHP', 'MySQL', 'JavaScript', 'AJAX', 'Excel']
+      technologies: ['PHP', 'MySQL', 'JavaScript', 'AJAX', 'REST APIs']
     }
   ]
 };
