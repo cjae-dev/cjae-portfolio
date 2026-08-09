@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import PortfolioShowcase from './components/PortfolioShowcase';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -117,7 +118,7 @@ export default function App() {
       return;
     }
 
-    if (currentHash === '#portfolio' || currentHash === '#about' || currentHash === '#skills' || currentHash === '#contact') {
+    if (currentHash === '#portfolio' || currentHash === '#about' || currentHash === '#experience' || currentHash === '#skills' || currentHash === '#contact') {
       window.setTimeout(() => {
         handleNavigate(currentHash);
       }, 120);
@@ -154,6 +155,7 @@ export default function App() {
       <main className={`route-shell ${isRouteLeaving ? 'route-leaving' : ''}`}>
         <Hero />
         <About />
+        <Experience />
         <PortfolioShowcase projects={projects} certificates={certificates} skills={skills} onProjectNavigate={goToProject} />
         {/* <Skills skills={skills} /> */}
         <Contact />
