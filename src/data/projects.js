@@ -47,6 +47,18 @@ export const projects = [
     metrics: ['Slider UI', 'Admin Form', 'Shortcode', 'Ratings'],
     github: 'https://github.com/cjae-dev/smart-testimonial-slider'
   },
+  {
+    title: 'Smart Dynamic Pricing Rules',
+    slug: 'smart-dynamic-pricing',
+    category: 'WordPress Plugin',
+    group: 'Project',
+    image: `${import.meta.env.BASE_URL}images/woocom-dynamic-pricing.png`,
+    description: 'A WooCommerce dynamic pricing plugin with bulk discounts, role-based pricing, BOGO rules, cart conditions, and analytics.',
+    longDescription: 'A WooCommerce extension for creating flexible pricing rules without editing code. It supports percentage and fixed discounts, fixed product pricing, Buy X Get Y promotions, customer-role pricing, quantity and cart-total conditions, rule priority and stacking, date-based campaigns, admin-side simulation, discount analytics, REST API access, and HPOS compatibility.',
+    stack: ['PHP', 'WordPress', 'WooCommerce', 'JavaScript', 'CSS', 'REST API'],
+    metrics: ['Dynamic Pricing', 'BOGO Rules', 'Role Pricing', 'Analytics', 'HPOS'],
+    github: 'https://github.com/cjae-dev/woocom-dynamic-pricing'
+  },
   // {
   //   title: 'OOm Institute Workflows',
   //   slug: 'oom-institute-workflows',
