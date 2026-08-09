@@ -43,7 +43,7 @@ export default function About() {
             <Globe2 size={26} />
             <span>Years of Experience</span>
             <p>Continuous learning journey</p>
-            <strong>4</strong>
+            <strong>5+</strong>
             <small>• live</small>
           </div>
         </div>

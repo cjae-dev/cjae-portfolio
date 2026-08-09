@@ -10,8 +10,6 @@ export default function Welcome({ isLoadingScreen = false }) {
           <div className="welcome-copy">
             <div className="mini-tags">
               <span><i></i> System Ready</span>
-              <span>Portfolio 2026</span>
-              <span>UI Loading</span>
             </div>
 
             <h1>Welcome to<br />my Portfolio<br />Website</h1>
