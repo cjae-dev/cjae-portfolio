@@ -19,8 +19,11 @@ export default function About() {
         </div>
 
         <div className="about-image" data-reveal="right">
-          <div className="profile-orb">
-            <img src={`${import.meta.env.BASE_URL}images/cjae-pic-edited.png`} alt="Cjae profile" />
+          <div className="profile-orb composite-profile-orb">
+            <img
+              src={`${import.meta.env.BASE_URL}images/cjae-about-developer-transparent-v2.png`}
+              alt="Cjae with playful web development stickers"
+            />
           </div>
         </div>
 
