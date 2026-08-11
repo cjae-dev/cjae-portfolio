@@ -59,6 +59,25 @@ export const projects = [
     metrics: ['Dynamic Pricing', 'BOGO Rules', 'Role Pricing', 'Analytics', 'HPOS'],
     github: 'https://github.com/cjae-dev/woocom-dynamic-pricing'
   },
+  {
+  title: 'Systems Architect WordPress Theme',
+  slug: 'systems-architect-theme',
+  category: 'WordPress Theme',
+  group: 'Project',
+  image: `${import.meta.env.BASE_URL}images/systems-architect-theme.png`,
+  description: 'A custom WordPress portfolio theme designed with a technical dashboard and IDE-inspired interface for showcasing full-stack development projects.',
+  longDescription: 'A fully custom WordPress theme built for developers who want to present projects like technical systems rather than traditional portfolio entries. It includes a dark dashboard-inspired UI, custom project and case study post types, tech stack and project category taxonomies, editable homepage sections, AJAX project filtering, GitHub REST API integration, custom Gutenberg blocks, ACF-ready project fields and theme settings, responsive layouts, SEO-friendly schema markup, and reusable PHP components.',
+  stack: ['PHP', 'WordPress', 'JavaScript', 'CSS', 'ACF', 'REST API', 'AJAX', 'Gutenberg'],
+  metrics: [
+    'Custom Theme',
+    'Custom Post Types',
+    'AJAX Filtering',
+    'GitHub API',
+    'Gutenberg Blocks',
+    'ACF Integration'
+  ],
+  github: 'https://github.com/cjae-dev/systems-architect-theme'
+},
   // {
   //   title: 'OOm Institute Workflows',
   //   slug: 'oom-institute-workflows',
