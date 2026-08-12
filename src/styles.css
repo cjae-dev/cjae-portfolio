@@ -1783,11 +1783,11 @@ body:after{
     radial-gradient(circle at 50% 0%,rgba(255,52,84,.28),transparent 36%),
     radial-gradient(circle at 15% 80%,rgba(255,122,61,.13),transparent 34%),
     #120006;
-  animation:loaderOut 5s ease forwards;
+  animation:loaderOut 3s ease forwards;
 }
 
 .loading-screen .welcome-panel{
-  animation:loaderPanel 4.75s ease forwards;
+  animation:loaderPanel 2.75s ease forwards;
 }
 
 @keyframes loaderPanel{

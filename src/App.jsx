@@ -87,7 +87,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    const loader = setTimeout(() => setIsLoading(false), 5000);
+    const loader = setTimeout(() => setIsLoading(false), 3000);
     return () => clearTimeout(loader);
   }, []);
 
