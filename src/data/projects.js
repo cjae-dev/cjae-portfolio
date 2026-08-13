@@ -108,6 +108,36 @@ export const projects = [
   ],
   github: 'https://github.com/cjae-dev/plan-this'
 },
+{
+  title: 'Ledger',
+  slug: 'ledger-expense-tracker',
+  category: 'React Web Application',
+  group: 'Project',
+  image: `${import.meta.env.BASE_URL}images/ledger-expense-tracker.png`,
+  description: 'A ledger-inspired expense and budget tracker for managing transactions, monitoring monthly spending, and visualizing financial trends.',
+  longDescription: 'A React and TypeScript personal finance application designed around a ledger-style interface. Users can add, edit, delete, search, and filter income and expense transactions, manage spending categories, set monthly category budgets, and review income, expenses, and net balance by month. Financial summaries, category breakdowns, spending trends, and budget progress are derived directly from transaction data and update automatically whenever records change. The application includes interactive Recharts visualizations, localStorage persistence, responsive layouts, reusable components, tabular currency formatting, animated summary values, and unit-tested financial calculation utilities.',
+  stack: [
+    'React',
+    'TypeScript',
+    'Vite',
+    'Tailwind CSS',
+    'Recharts',
+    'React Router',
+    'Context API',
+    'useReducer',
+    'date-fns',
+    'Vitest'
+  ],
+  metrics: [
+    'Transaction CRUD',
+    'Budget Tracking',
+    'Data Visualization',
+    'Spending Analytics',
+    'Category Management',
+    'Local Persistence'
+  ],
+  github: 'https://github.com/cjae-dev/ledger-expense-tracker'
+},
   // {
   //   title: 'OOm Institute Workflows',
   //   slug: 'oom-institute-workflows',
