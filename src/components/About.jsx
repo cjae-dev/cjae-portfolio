@@ -13,7 +13,13 @@ export default function About() {
           </p>
           <div className="quote-box">“Building real projects, solving real problems, and improving through every line of code.”</div>
           <div className="about-actions">
-            <a className="btn btn-primary" href="/files/Limos_Cjae_Resume.pdf" download><FileText size={17} /> Download CV</a>
+            <a
+              className="btn btn-primary"
+              href={`${import.meta.env.BASE_URL}files/Limos_Cjae_Resume.pdf`}
+              download="Limos_Cjae_Resume.pdf"
+            >
+              <FileText size={17} /> Download CV
+            </a>
             <a className="btn btn-ghost" href="#portfolio"><Code2 size={17} /> View Projects</a>
           </div>
         </div>

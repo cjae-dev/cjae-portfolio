@@ -33,7 +33,13 @@ export default function Navbar({ onNavigate }) {
         </nav>
 
         <div className="nav-actions">
-          <a className="btn btn-ghost" href="/files/Limos_Cjae_Resume.pdf" download>Download CV</a>
+          <a
+            className="btn btn-ghost"
+            href={`${import.meta.env.BASE_URL}files/Limos_Cjae_Resume.pdf`}
+            download="Limos_Cjae_Resume.pdf"
+          >
+            Download CV
+          </a>
           <button className="menu-btn" type="button" onClick={() => setOpen(!open)} aria-label="Toggle navigation">
             <span></span>
             <span></span>

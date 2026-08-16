@@ -138,6 +138,36 @@ export const projects = [
   ],
   github: 'https://github.com/cjae-dev/ledger-expense-tracker'
 },
+{
+  title: 'Foreman',
+  slug: 'foreman-project-manager',
+  category: 'Laravel Web Application',
+  group: 'Project',
+  image: `${import.meta.env.BASE_URL}images/foreman-project-manager.png`,
+  description: 'A multi-tenant project management application for organizations to manage teams, projects, tasks, roles, and workflows with secure data isolation.',
+  longDescription: 'A Laravel 12 multi-tenant project management application designed around secure organization-based data isolation. Users can create and switch between organizations, invite team members, assign Admin, Member, and Viewer roles, manage projects, create and assign tasks, track due dates, priorities, and task statuses, and monitor team activity from an organization-specific dashboard. The application uses Laravel Policies and Gates to enforce authorization, global organization scopes to prevent cross-tenant data access, queued notifications for invitations and task assignments, activity logging for important changes, realistic demo data, responsive Blade and Tailwind CSS interfaces, and feature tests covering tenancy isolation and role-based permissions.',
+  stack: [
+    'Laravel 12',
+    'PHP',
+    'Blade',
+    'Tailwind CSS',
+    'Alpine.js',
+    'MariaDB',
+    'Laravel Policies',
+    'Laravel Queues',
+    'Eloquent ORM',
+    'Pest'
+  ],
+  metrics: [
+    'Multi-Tenancy',
+    'Role-Based Access',
+    'Project & Task Management',
+    'Team Invitations',
+    'Activity Logging',
+    'Queued Notifications'
+  ],
+  github: 'YOUR_FOREMAN_GITHUB_URL'
+},
   // {
   //   title: 'OOm Institute Workflows',
   //   slug: 'oom-institute-workflows',
