@@ -12,6 +12,66 @@ export const projects = [
     github: 'https://github.com/cjae-dev/crm-lite'
   },
   {
+    title: 'Ledger',
+    slug: 'ledger-expense-tracker',
+    category: 'React Web Application',
+    group: 'Project',
+    image: `${import.meta.env.BASE_URL}images/ledger-expense-tracker.png`,
+    description: 'A ledger-inspired expense and budget tracker for managing transactions, monitoring monthly spending, and visualizing financial trends.',
+    longDescription: 'A React and TypeScript personal finance application designed around a ledger-style interface. Users can add, edit, delete, search, and filter income and expense transactions, manage spending categories, set monthly category budgets, and review income, expenses, and net balance by month. Financial summaries, category breakdowns, spending trends, and budget progress are derived directly from transaction data and update automatically whenever records change. The application includes interactive Recharts visualizations, localStorage persistence, responsive layouts, reusable components, tabular currency formatting, animated summary values, and unit-tested financial calculation utilities.',
+    stack: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'Recharts',
+      'React Router',
+      'Context API',
+      'useReducer',
+      'date-fns',
+      'Vitest'
+    ],
+    metrics: [
+      'Transaction CRUD',
+      'Budget Tracking',
+      'Data Visualization',
+      'Spending Analytics',
+      'Category Management',
+      'Local Persistence'
+    ],
+    github: 'https://github.com/cjae-dev/ledger-expense-tracker'
+  },
+  {
+    title: 'Foreman',
+    slug: 'foreman-project-manager',
+    category: 'Laravel Web Application',
+    group: 'Project',
+    image: `${import.meta.env.BASE_URL}images/foreman-project-manager.png`,
+    description: 'A multi-tenant project management application for organizations to manage teams, projects, tasks, roles, and workflows with secure data isolation.',
+    longDescription: 'A Laravel 12 multi-tenant project management application designed around secure organization-based data isolation. Users can create and switch between organizations, invite team members, assign Admin, Member, and Viewer roles, manage projects, create and assign tasks, track due dates, priorities, and task statuses, and monitor team activity from an organization-specific dashboard. The application uses Laravel Policies and Gates to enforce authorization, global organization scopes to prevent cross-tenant data access, queued notifications for invitations and task assignments, activity logging for important changes, realistic demo data, responsive Blade and Tailwind CSS interfaces, and feature tests covering tenancy isolation and role-based permissions.',
+    stack: [
+      'Laravel 12',
+      'PHP',
+      'Blade',
+      'Tailwind CSS',
+      'Alpine.js',
+      'MariaDB',
+      'Laravel Policies',
+      'Laravel Queues',
+      'Eloquent ORM',
+      'Pest'
+    ],
+    metrics: [
+      'Multi-Tenancy',
+      'Role-Based Access',
+      'Project & Task Management',
+      'Team Invitations',
+      'Activity Logging',
+      'Queued Notifications'
+    ],
+    github: 'YOUR_FOREMAN_GITHUB_URL'
+  },
+  {
     title: 'Smart CTA Banner',
     slug: 'smart-cta-banner',
     category: 'WordPress Plugin',
@@ -107,66 +167,6 @@ export const projects = [
     'Shopping List'
   ],
   github: 'https://github.com/cjae-dev/plan-this'
-},
-{
-  title: 'Ledger',
-  slug: 'ledger-expense-tracker',
-  category: 'React Web Application',
-  group: 'Project',
-  image: `${import.meta.env.BASE_URL}images/ledger-expense-tracker.png`,
-  description: 'A ledger-inspired expense and budget tracker for managing transactions, monitoring monthly spending, and visualizing financial trends.',
-  longDescription: 'A React and TypeScript personal finance application designed around a ledger-style interface. Users can add, edit, delete, search, and filter income and expense transactions, manage spending categories, set monthly category budgets, and review income, expenses, and net balance by month. Financial summaries, category breakdowns, spending trends, and budget progress are derived directly from transaction data and update automatically whenever records change. The application includes interactive Recharts visualizations, localStorage persistence, responsive layouts, reusable components, tabular currency formatting, animated summary values, and unit-tested financial calculation utilities.',
-  stack: [
-    'React',
-    'TypeScript',
-    'Vite',
-    'Tailwind CSS',
-    'Recharts',
-    'React Router',
-    'Context API',
-    'useReducer',
-    'date-fns',
-    'Vitest'
-  ],
-  metrics: [
-    'Transaction CRUD',
-    'Budget Tracking',
-    'Data Visualization',
-    'Spending Analytics',
-    'Category Management',
-    'Local Persistence'
-  ],
-  github: 'https://github.com/cjae-dev/ledger-expense-tracker'
-},
-{
-  title: 'Foreman',
-  slug: 'foreman-project-manager',
-  category: 'Laravel Web Application',
-  group: 'Project',
-  image: `${import.meta.env.BASE_URL}images/foreman-project-manager.png`,
-  description: 'A multi-tenant project management application for organizations to manage teams, projects, tasks, roles, and workflows with secure data isolation.',
-  longDescription: 'A Laravel 12 multi-tenant project management application designed around secure organization-based data isolation. Users can create and switch between organizations, invite team members, assign Admin, Member, and Viewer roles, manage projects, create and assign tasks, track due dates, priorities, and task statuses, and monitor team activity from an organization-specific dashboard. The application uses Laravel Policies and Gates to enforce authorization, global organization scopes to prevent cross-tenant data access, queued notifications for invitations and task assignments, activity logging for important changes, realistic demo data, responsive Blade and Tailwind CSS interfaces, and feature tests covering tenancy isolation and role-based permissions.',
-  stack: [
-    'Laravel 12',
-    'PHP',
-    'Blade',
-    'Tailwind CSS',
-    'Alpine.js',
-    'MariaDB',
-    'Laravel Policies',
-    'Laravel Queues',
-    'Eloquent ORM',
-    'Pest'
-  ],
-  metrics: [
-    'Multi-Tenancy',
-    'Role-Based Access',
-    'Project & Task Management',
-    'Team Invitations',
-    'Activity Logging',
-    'Queued Notifications'
-  ],
-  github: 'YOUR_FOREMAN_GITHUB_URL'
 },
   // {
   //   title: 'OOm Institute Workflows',
