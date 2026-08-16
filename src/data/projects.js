@@ -72,6 +72,36 @@ export const projects = [
     github: 'YOUR_FOREMAN_GITHUB_URL'
   },
   {
+    title: 'Plan This',
+    slug: 'plan-this',
+    category: 'React Web Application',
+    group: 'Project',
+    image: `${import.meta.env.BASE_URL}images/plan-this.png`,
+    description: 'A recipe discovery and weekly meal-planning application with recipe search, favorites, drag-and-drop planning, and shopping-list generation.',
+    longDescription: 'A React and TypeScript meal-planning application built around the Spoonacular API. Users can search and filter recipes, view ingredients and nutrition details, save favorites, and organize meals across a Monday-to-Sunday planner using drag-and-drop. Favorites and meal plans are persisted with localStorage, while TanStack Query manages API caching, loading states, errors, and request cancellation. The application also generates a shopping list by aggregating ingredients from planned meals and includes responsive layouts, dark mode, form validation, reusable components, and unit tests for core planner and data-transformation logic.',
+    stack: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'TanStack Query',
+      'React Router',
+      'dnd-kit',
+      'Zod',
+      'Vitest',
+      'Spoonacular API'
+    ],
+    metrics: [
+      'Recipe Search',
+      'API Integration',
+      'Drag & Drop',
+      'Meal Planner',
+      'Favorites',
+      'Shopping List'
+    ],
+    github: 'https://github.com/cjae-dev/plan-this'
+  },
+  {
     title: 'Smart CTA Banner',
     slug: 'smart-cta-banner',
     category: 'WordPress Plugin',
@@ -137,36 +167,6 @@ export const projects = [
     'ACF Integration'
   ],
   github: 'https://github.com/cjae-dev/systems-architect-theme'
-},
-{
-  title: 'Plan This',
-  slug: 'plan-this',
-  category: 'React Web Application',
-  group: 'Project',
-  image: `${import.meta.env.BASE_URL}images/plan-this.png`,
-  description: 'A recipe discovery and weekly meal-planning application with recipe search, favorites, drag-and-drop planning, and shopping-list generation.',
-  longDescription: 'A React and TypeScript meal-planning application built around the Spoonacular API. Users can search and filter recipes, view ingredients and nutrition details, save favorites, and organize meals across a Monday-to-Sunday planner using drag-and-drop. Favorites and meal plans are persisted with localStorage, while TanStack Query manages API caching, loading states, errors, and request cancellation. The application also generates a shopping list by aggregating ingredients from planned meals and includes responsive layouts, dark mode, form validation, reusable components, and unit tests for core planner and data-transformation logic.',
-  stack: [
-    'React',
-    'TypeScript',
-    'Vite',
-    'Tailwind CSS',
-    'TanStack Query',
-    'React Router',
-    'dnd-kit',
-    'Zod',
-    'Vitest',
-    'Spoonacular API'
-  ],
-  metrics: [
-    'Recipe Search',
-    'API Integration',
-    'Drag & Drop',
-    'Meal Planner',
-    'Favorites',
-    'Shopping List'
-  ],
-  github: 'https://github.com/cjae-dev/plan-this'
 },
   // {
   //   title: 'OOm Institute Workflows',
