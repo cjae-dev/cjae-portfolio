@@ -102,6 +102,41 @@ export const projects = [
     github: 'https://github.com/cjae-dev/plan-this'
   },
   {
+    title: 'Brew Nearby',
+    slug: 'brew-nearby',
+    category: 'React Web Application',
+    group: 'Project',
+    image: `${import.meta.env.BASE_URL}images/brew-nearby.png`,
+    description: 'A real-time cafe discovery application with location-based search, interactive maps, live filters, cafe details, and locally saved favorites.',
+    longDescription: 'A React and TypeScript cafe-finder application built around the Google Maps JavaScript API and Places API. Users can detect their current location or search a different area, discover nearby cafes on an interactive map, and browse synchronized cafe results sorted by distance. The application includes filtering for open-now status, minimum rating, price level, and search radius, along with detailed cafe information such as photos, address, phone number, opening hours, ratings, and directions. Favorites are persisted using localStorage, while reusable hooks handle geolocation, distance calculations, API data normalization, and live opening-hour logic. The project also includes responsive map and list layouts, mobile-friendly panels, loading and empty states, and a demo fallback when a Google Maps API key is not configured.',
+    stack: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'Google Maps API',
+      'Google Places API',
+      '@vis.gl/react-google-maps',
+      'TanStack Query',
+      'LocalStorage',
+      'Vitest'
+    ],
+    metrics: [
+      'Geolocation',
+      'Google Maps',
+      'Places API',
+      'Live Filtering',
+      'Cafe Discovery',
+      'Favorites'
+    ],
+    github: 'https://github.com/cjae-dev/brew-nearby'
+  },
+
+
+
+  // WORDPRESS
+
+  {
     title: 'Smart CTA Banner',
     slug: 'smart-cta-banner',
     category: 'WordPress Plugin',
