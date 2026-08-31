@@ -38,7 +38,7 @@ export default function About() {
             <Code2 size={26} />
             <span>Total Projects</span>
             <p>Web, design, and plugin work delivered</p>
-            <strong>10</strong>
+            <strong>11</strong>
             <small>• live</small>
           </div>
           <div className="stat-box" data-reveal="up">

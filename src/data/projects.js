@@ -131,6 +131,36 @@ export const projects = [
     ],
     github: 'https://github.com/cjae-dev/brew-nearby'
   },
+  {
+    title: 'CollabDocs',
+    slug: 'collabdocs',
+    category: 'Full Stack Web Application',
+    group: 'Project',
+    image: `${import.meta.env.BASE_URL}images/collab-docs.png`,
+    description: 'A lightweight collaborative document editor with rich-text editing, autosave, file importing, document sharing, role-based permissions, and persistent cloud storage.',
+    longDescription: 'A full-stack document collaboration application built with Next.js, TypeScript, TipTap, and Supabase. Users can create, rename, edit, save, and reopen documents with rich-text formatting including headings, bold, italic, underline, bulleted lists, and numbered lists. Documents are automatically saved while editing, with structured TipTap content persisted in Supabase PostgreSQL to preserve formatting across sessions. The application supports importing .txt and .md files as editable documents and includes a sharing workflow where document owners can grant Editor or Viewer access to another user. Owned and shared documents are clearly separated within the workspace, while permission checks control whether shared users can edit or only view a document. The project also includes validation, error handling, responsive document management views, automated tests with Vitest, Supabase database setup scripts, and deployment through Vercel.',
+    stack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'TipTap',
+      'Supabase',
+      'PostgreSQL',
+      'Vitest',
+      'Vercel'
+    ],
+    metrics: [
+      'Rich Text Editing',
+      'Auto-save',
+      'File Import',
+      'Document Sharing',
+      'Role Permissions',
+      'Cloud Persistence'
+    ],
+    github: 'https://github.com/cjae-dev/collab-docs'
+  },
+
 
 
 
