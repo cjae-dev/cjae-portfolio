@@ -1,5 +1,5 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { projects, skills } from './data/projects';
 import { certificates } from './data/certificates';
 import Navbar from './components/Navbar';
@@ -24,7 +24,10 @@ export default function App() {
 
     const headerOffset = 86;
     const startTop = window.pageYOffset;
-    const targetTop = Math.max(0, target.getBoundingClientRect().top + startTop - headerOffset);
+    const targetTop = Math.max(
+      0,
+      target.getBoundingClientRect().top + startTop - headerOffset
+    );
     const distance = targetTop - startTop;
 
     if (Math.abs(distance) < 8) {
@@ -50,6 +53,7 @@ export default function App() {
       }
 
       window.scrollTo(0, targetTop);
+
       window.setTimeout(() => {
         document.body.classList.remove('is-navigating');
       }, 120);
@@ -57,7 +61,6 @@ export default function App() {
 
     requestAnimationFrame(animateScroll);
   };
-
 
   const goToProject = (slug) => {
     setIsRouteLeaving(true);
@@ -100,6 +103,7 @@ export default function App() {
 
   useEffect(() => {
     const items = document.querySelectorAll('[data-reveal]');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -118,16 +122,18 @@ export default function App() {
       return;
     }
 
-    if (currentHash === '#portfolio' || currentHash === '#about' || currentHash === '#experience' || currentHash === '#skills' || currentHash === '#contact') {
+    if (
+      currentHash === '#portfolio' ||
+      currentHash === '#about' ||
+      currentHash === '#experience' ||
+      currentHash === '#skills' ||
+      currentHash === '#contact'
+    ) {
       window.setTimeout(() => {
         handleNavigate(currentHash);
       }, 120);
     }
   }, [currentHash, isLoading]);
-
-  if (isLoading) {
-    return <Welcome isLoadingScreen />;
-  }
 
   const projectSlug = currentHash.replace('#/project/', '');
   const selectedProject = currentHash.startsWith('#/project/')
@@ -137,27 +143,49 @@ export default function App() {
   if (selectedProject) {
     return (
       <>
+        {isLoading && <Welcome isLoadingScreen />}
+
         <Navbar onNavigate={handleNavigate} />
+
         <div className={`route-shell ${isRouteLeaving ? 'route-leaving' : ''}`}>
-          <ProjectDetailPage project={selectedProject} onBack={goBackToPortfolio} />
+          <ProjectDetailPage
+            project={selectedProject}
+            onBack={goBackToPortfolio}
+          />
         </div>
       </>
     );
   }
 
   if (currentHash === '#thank-you') {
-    return <ThankYou />;
+    return (
+      <>
+        {isLoading && <Welcome isLoadingScreen />}
+        <ThankYou />
+      </>
+    );
   }
 
   return (
     <>
+      {isLoading && <Welcome isLoadingScreen />}
+
       <Navbar onNavigate={handleNavigate} />
+
       <main className={`route-shell ${isRouteLeaving ? 'route-leaving' : ''}`}>
         <Hero />
         <About />
         <Experience />
-        <PortfolioShowcase projects={projects} certificates={certificates} skills={skills} onProjectNavigate={goToProject} />
+
+        <PortfolioShowcase
+          projects={projects}
+          certificates={certificates}
+          skills={skills}
+          onProjectNavigate={goToProject}
+        />
+
         {/* <Skills skills={skills} /> */}
+
         <Contact />
       </main>
     </>
